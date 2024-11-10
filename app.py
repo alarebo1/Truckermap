@@ -31,7 +31,7 @@ MAP_API_KEY=os.getenv('MAP_API_KEY')
 # app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL").replace(
 #     "://", "ql://", 1
 # )
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 db = SQLAlchemy(app)
