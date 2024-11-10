@@ -134,7 +134,8 @@ class UpdateForm(FlaskForm):
     submit = SubmitField("Update Profile")
 
 
-db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 def get_profile_details():
